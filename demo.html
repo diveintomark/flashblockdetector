@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf8">
+  <title>Flash Block Detector demo</title>
+</head>
+<body>
+<p id=output></p>
+<hr>
+<p><a href="https://github.com/patrickkettner/flashblockdetector/">more information</a>
+<script src="fbd.js"></script>
+<script>
+FBD.initialize(function(has_fb) {
+  var output = document.getElementById('output');
+  if (has_fb) {
+    output.innerHTML = 'a Flash blocker was detected';
+  } else {
+    output.innerHTML = 'no Flash blocker was detected';
+  }
+});
+</script>
+</body>
+</html>
